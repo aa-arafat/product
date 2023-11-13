@@ -1,10 +1,12 @@
+const body = document.querySelector("body");
+body.classList.add('bg-secondary')
 const root = document.querySelector("#app");
-root.classList.add("mt-5",'h-25');
+root.classList.add("mt-5");
 
 const mainContainer = document.createElement("div");
 mainContainer.classList.add("mainContainer");
 mainContainer.classList.add("container");
-mainContainer.classList.add('d-flex', 'w-100');
+mainContainer.classList.add('d-flex', 'w-100',"h-25");
 
 const allProducts = document.createElement("div");
 allProducts.classList.add("allproduct", "w-50", "mx-3");
@@ -28,12 +30,13 @@ root.append(mainContainer);
 
 const container = document.createElement("div");
 container.classList.add("row");
-container.classList.add("row-cal-1");
+container.classList.add("row-cols-2",'gy-3');
 
 function createProduct(img, name, price) {
   const col = document.createElement("div");
   col.classList.add("col");
 
+  
   const productCardBody = document.createElement("div");
   productCardBody.classList.add("card-body");
 
@@ -53,10 +56,22 @@ function createProduct(img, name, price) {
   const productPrice = document.createElement("p");
   productPrice.innerText = price;
 
-  productCard.append(productImg, productName, productPrice);
+ const cartButton = document.createElement('p')
+ cartButton.classList.add('cartButton')
+ cartButton.innerText='Add to cart'
+ cartButton.classList.add('btn','btn-dark')
+
+cartButton.addEventListener('click', function () {
+    cartButton.innerText = 'In cart';
+    cartButton.disabled = true; // Disable the button after adding to cart (optional)
+  });
+
+  productCard.append(productImg, productName, productPrice,cartButton);
   productCardBody.append(productCard);
   col.append(productCardBody);
   container.append(col);
+
+  
 }
 
 allProducts.append(container);
