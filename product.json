@@ -1,19 +1,19 @@
 {
     "products": [
       {
-        "img": "path/to/image1.jpg",
-        "name": "Product 1",
-        "price": 29.99
+        "img": "./img/bottle.jpg",
+        "name": "Watter battle",
+        "price": 200
       },
       {
-        "img": "path/to/image2.jpg",
-        "name": "Product 2",
-        "price": 39.99
+        "img": "./img/protector.jpg",
+        "name": "Phone protector",
+        "price": 300
       },
       {
-        "img": "path/to/image3.jpg",
-        "name": "Product 3",
-        "price": 49.99
+        "img": "./img/usb.jpg",
+        "name": "Boat Micro USV",
+        "price": 200
       }
     ]
   }
