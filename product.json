@@ -14,12 +14,8 @@
         "img": "./img/usb.jpg",
         "name": "Boat Micro USV",
         "price": 200
-      },
-      {
-        "img": "./img/watch.webp",
-        "name": "Boat Micro USV",
-        "price": 200
       }
+      
     ]
   }
   
