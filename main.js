@@ -79,7 +79,8 @@ function createProduct(img, name, price) {
 
     const inCartPrice = document.createElement("p");
     inCartPrice.innerText = price;
-    
+  
+
     const removeButton = document.createElement("button")
     removeButton.classList.add("btn", "btn-danger")
     removeButton.innerText="Remove"
@@ -117,6 +118,9 @@ function createProduct(img, name, price) {
     allproductCard.append(allItems,allProductRemoveButton);
     
     cartButton.disabled = true;
+
+     
+
 
     removeButton.addEventListener('click',function(){
       
@@ -159,4 +163,6 @@ fetch("https://raw.githubusercontent.com/aa-arafat/product/main/product.json")
       const itemPrice = data.price;
       createProduct(itemImg, itemName, itemPrice);
     });
+    
   });
+  
